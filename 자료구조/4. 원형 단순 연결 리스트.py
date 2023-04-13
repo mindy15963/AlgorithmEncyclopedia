@@ -1,9 +1,9 @@
-# 단순 연결 리스트 (Singly Linked List)
-# 각 노드 당 한 개의 포인터가 있고 포인터는 다음 노드의 위치를 가르키며 테일은 가장 마지막이므로 다음을 가리키는 포인터를 갖지 않는다.
+# 원형 단순 연결 리스트 (Singly Circular Linked List)
+# 단일 연결 리스트의 테일에 포인터가 추가된 형태로 테일의 포인터는 헤더를 가르켜 원형이 되도록 한다.
 
-from dstructure.SLL import SLL
+from dstructure.SCLL import SCLL
   
-obj=SLL()
+obj=SCLL()
 n=int(input('입력할 값의 갯수 입력 : '))
 for i in range(n):
     v=input('입력할 값 입력 : ')
