@@ -4,7 +4,7 @@
 from dstructure.SCLL import SCLL
   
 obj=SCLL()
-n=int(input('입력할 값의 갯수 입력 : '))
+n=int(input('입력할 값의 개수 입력 : '))
 for i in range(n):
     v=input('입력할 값 입력 : ')
     obj.insert(v)

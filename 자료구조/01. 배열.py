@@ -11,7 +11,7 @@ print(data1[d1n])
 print(string1[s1n])
 
 # 2차원 배열
-n=int(input('배열의 갯수 입력 : '))
+n=int(input('배열의 개수 입력 : '))
 data2=[list(map(int,input('2차원 정수 배열 입력 : ').split())) for _ in range(n)]
 d2na,d2nb=map(int,input('원하는 2차원 정수 배열의 색인 입력 : ').split())
 print(data2[d2na][d2nb])
