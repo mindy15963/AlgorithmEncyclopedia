@@ -21,12 +21,12 @@ edges=list(tuple(map(int,input('엣지 값 입력 : ').split())) for r in range(
 G.add_nodes_from(nodes)
 G.add_edges_from(edges)
 
-nx.draw(G, with_labels=True, font_weight='bold')
-plt.show()
-
 am=nx.adjacency_matrix(G).todense()
 print('인접 행렬 : \n',am)
 
 print('인접 리스트 : \n')
 for line in generate_adjlist_with_all_edges(G):
     print(line)
+    
+nx.draw(G, with_labels=True, font_weight='bold')
+plt.show()
