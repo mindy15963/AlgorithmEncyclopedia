@@ -1,5 +1,7 @@
 # 힙 트리 (Heap Tree)
 # 여러 개의 값 중에서 가장 크거나 작은 값을 빠르게 찾기 위해 만든 이진 트리로 힙(Heap)이라고도 부른다.
+# 최대 힙 (Max Heap)
+# 부모 노드의 키 값이 자식 노드의 키 값보다 크거나 같은 완전 이진 트리이다.
 
 import heapq as h
 from binarytree import *
