@@ -1,5 +1,5 @@
 # 선택 정렬 (Selection Sort)
-# 데이터 배열에서 가장 작은 데이터를 선택하여 앞으로 보내는 정렬이다.
+# 데이터 배열에서 가장 작은 데이터를 선택하여 앞으로 보내는 정렬 알고리즘이다.
 
 data=list(map(int,input('배열 입력 : ').split()))
 for i in range(len(data) - 1):
