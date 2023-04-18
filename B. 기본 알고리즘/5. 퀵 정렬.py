@@ -21,4 +21,4 @@ def quick_sort(arr):
     return quick_sort(lesser_arr) + equal_arr + quick_sort(greater_arr)
 
 data=list(map(int,input('배열 입력 : ').split()))
-print('병합 정렬 결과 값 : ',quick_sort(data))
+print('퀵 정렬 결과 값 : ',quick_sort(data))
