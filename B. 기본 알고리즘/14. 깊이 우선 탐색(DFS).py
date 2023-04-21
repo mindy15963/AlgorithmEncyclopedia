@@ -1,5 +1,5 @@
-# 너비 우선 탐색 (BFS, Breadth First Search)
-# 그래프에서 가까운 노드부터 탐색하는 알고리즘이다.
+# 깊이 우선 탐색 (DFS, Depth First Search)
+# 그래프에서 깊은 부분을 우선적으로 탐색하는 알고리즘이다.
 
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -11,8 +11,8 @@ edges=list(tuple(input('엣지 값 입력 : ').split()) for r in range(int(input
 G.add_edges_from(edges)
 
 sn=input('기준 노드 입력 : ')
-bfs = nx.bfs_predecessors(G, source=sn)
-bfs = dict(bfs)
+dfs = nx.dfs_predecessors(G, source=sn)
+dfs = dict(dfs)
 nx.draw(G, font_weight='bold', with_labels=True)
 plt.show()
-print('최단거리 : \n',bfs)
+print('최단거리 : \n',dfs)
