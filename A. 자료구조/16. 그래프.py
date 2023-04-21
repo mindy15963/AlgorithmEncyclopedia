@@ -14,7 +14,7 @@ def generate_adjlist_with_all_edges(G, delimiter=" "):
         
 G = nx.Graph()
 
-nodes=list(map(int,input('노드에 입력할 값 입력 : ').split()))
+nodes=list(map(int,input('노드 값 입력 : ').split()))
 
 edges=list(tuple(map(int,input('엣지 값 입력 : ').split())) for r in range(int(input('엣지의 개수 입력 : '))))
 
