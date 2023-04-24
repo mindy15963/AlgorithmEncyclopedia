@@ -1,5 +1,5 @@
-# 프림 알고리즘 (Prim's Algorithm)
-# 무향 연결 그래프가 주어질 때, '최소 신장 트리(Minimum Spanning Tree)' 라고 부르는 서브 그래프를 찾는 알고리즘이다.
+# 크루스칼 알고리즘 (Kruskal Algorithm)
+# 가장 적은 비용으로 모든 노드를 연결하기 위해 사용하는 알고리즘이다.
 
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -12,7 +12,7 @@ for i in range(ec):
     d,a=input('엣지 값 입력 : ').split()
     w=int(input('가중치 입력 : '))
     G.add_edge(d,a,weight=w)
-mst = nx.minimum_spanning_tree(G, algorithm="prim")
+mst = nx.minimum_spanning_tree(G, algorithm="kruskal")
 pos = nx.spring_layout(G)
 nx.draw(G,pos,font_weight='bold', with_labels=True)
 labels = nx.get_edge_attributes(G,'weight')
