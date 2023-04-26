@@ -1,5 +1,5 @@
-# 벨만-포드 알고리즘 (Bellman-Ford Algorithm)
-# 가중 유향 그래프에서 노드 사이의 최단 경로를 찾는 알고리즘이다.
+# 플로이드-워셜 알고리즘 (Floyd-Warshall Algorithm)
+# 그래프에서 가능한 모든 노드 쌍에 대해 최단 거리를 구하는 알고리즘이다.
 
 import networkx as nx
 
@@ -13,7 +13,7 @@ for i in range(ec):
     G.add_edge(d,a,weight=w)
 so=input('출발지 입력 : ')
 ta=input('도착지 입력 : ')
-bf_path=nx.bellman_ford_path(G, so, ta)
-bf_length=nx.bellman_ford_path_length(G, so, ta)
-print('결과 값 : \n',bf_path)
-print('최단 거리 : ',bf_length)
+fwp,fwd = nx.floyd_warshall_predecessor_and_distance(G)
+fw_path=nx.reconstruct_path(so,ta,fwp)
+print('결과 값 : \n',fw_path)
+print('최단 거리 테이블: \n',fwd)
