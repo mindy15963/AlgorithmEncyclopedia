@@ -14,4 +14,6 @@ for i in range(ec):
 so=input('출발지 입력 : ')
 ta=input('도착지 입력 : ')
 d_path=nx.dijkstra_path(G, so, ta)
+d_length=nx.dijkstra_path_length(G, so, ta)
 print('결과 값 : \n',d_path)
+print('최소 거리 : ',d_length)
