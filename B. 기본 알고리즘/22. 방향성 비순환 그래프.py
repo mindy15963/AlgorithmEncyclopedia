@@ -1,5 +1,5 @@
-# 플로이드-워셜 알고리즘 (Floyd-Warshall Algorithm)
-# 그래프에서 가능한 모든 노드 쌍에 대해 최단 거리를 구하는 알고리즘이다.
+# 방향성 비순환 그래프 (DAG, Directed Acyclic Graph)
+# 한 방향으로 이어지지만, 순환은 하지 않는 그래프이다.
 
 import networkx as nx
 
@@ -13,7 +13,7 @@ for i in range(ec):
     G.add_edge(d,a,weight=w)
 so=input('출발지 입력 : ')
 ta=input('도착지 입력 : ')
-fwp,fwd = nx.floyd_warshall_predecessor_and_distance(G)
-fw_path=nx.reconstruct_path(so,ta,fwp)
-print('결과 값 : \n',fw_path)
-print('최단 거리 테이블 : \n',fwd)
+dag_sp=nx.shortest_path(G, source=so, target=ta)
+dag_length=nx.shortest_path_length(G, source=so, target=ta)
+print('결과 값 : \n',dag_sp)
+print('최단 거리 : \n',dag_length)
