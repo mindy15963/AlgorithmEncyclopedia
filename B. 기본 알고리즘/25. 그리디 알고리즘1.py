@@ -11,4 +11,4 @@ for coin in array:
     count += n // coin
     n %= coin 
 
-print(count)
+print('동전의 개수 : ',count)
