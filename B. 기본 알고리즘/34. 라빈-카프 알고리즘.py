@@ -6,6 +6,6 @@ from pyalgs.algorithms.strings.substring_search import RabinKarp
 s1=input('문자열 1 입력 : ')
 s2=input('문자열 2 입력 : ')
 
-ss = RabinKarp(s1)
+ss = RabinKarp(s2)
 
-print('결과값 : ',ss.search_in(s2))
+print('결과값 : ',ss.search_in(s1))
