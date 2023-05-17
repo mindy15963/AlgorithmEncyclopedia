@@ -6,8 +6,8 @@ d = dict()
  
 for i in range(n):
     key = "P"+str(i+1)
-    a = int(input("프로세스 "+str(i+1)+"의 도착시간 입력 : "))
-    b = int(input("프로세스 "+str(i+1)+"의 실행시간 입력 : "))
+    a = int(input("프로세스 "+str(i+1)+"의 도착 시간 입력 : "))
+    b = int(input("프로세스 "+str(i+1)+"의 실행 시간 입력 : "))
     l = []
     l.append(a)
     l.append(b)
@@ -35,8 +35,14 @@ avg_WT = 0
 for i in WT:
     avg_WT +=i
 avg_WT = (avg_WT/n)
+
+avg_TAT = 0
+for i in TAT:
+    avg_TAT +=i
+avg_TAT = (avg_TAT/n)
  
-print("프로세스 | 도착시간 | 실행시간 | 실행종료 | 반환시간 | 대기시간 |")
+print("| 프로세스 | 도착 시간 | 실행 시간 | 완료 시간 | 반환 시간 | 대기 시간 |")
 for i in range(n):
       print("   ",d[i][0],"   |   ",d[i][1][0]," |    ",d[i][1][1]," |    ",ET[i],"  |    ",TAT[i],"  |   ",WT[i],"   |  ")
-print("평균 대기시간 : ",avg_WT)
+print("평균 대기 시간 : ",avg_WT)
+print("평균 반환 시간 : ",avg_TAT)
