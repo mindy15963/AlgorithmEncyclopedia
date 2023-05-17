@@ -7,9 +7,7 @@ class SJF:
         for i in range(no_of_processes):
             temporary = []
             process_id = int(input("프로세스 ID 입력: "))
-
             arrival_time = int(input(f"프로세스 {process_id}의 도착 시간 입력 : "))
-
             burst_time = int(input(f"프로세스 {process_id}의 실행 시간 입력 : "))
             temporary.extend([process_id, arrival_time, burst_time, 0])
             process_data.append(temporary)
@@ -85,7 +83,7 @@ class SJF:
 
     def printData(self, process_data, average_turnaround_time, average_waiting_time):
         process_data.sort(key=lambda x: x[0])
-        print("| 프로세스 | 도착 시간 | 실행 시간 | 실행 완료 | 완료 시간 | 반환 시간 | 대기 시간 |")
+        print("| 프로세스 ID | 도착 시간 | 실행 시간 | 실행 완료 | 완료 시간 | 반환 시간 | 대기 시간 |")
 
         for i in range(len(process_data)):
             for j in range(len(process_data[i])):

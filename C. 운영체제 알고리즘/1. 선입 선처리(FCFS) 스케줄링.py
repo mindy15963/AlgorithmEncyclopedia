@@ -1,48 +1,65 @@
 # 선입 선처리(FCFS) 스케줄링
 # 먼저 자원 사용을 요청한 프로세스에게 자원을 할당해 주는 방식의 스케줄링 알고리즘이다.
 
-n= int(input("프로세스의 개수 입력 : "))
-d = dict()
- 
-for i in range(n):
-    key = "P"+str(i+1)
-    a = int(input("프로세스 "+str(i+1)+"의 도착 시간 입력 : "))
-    b = int(input("프로세스 "+str(i+1)+"의 실행 시간 입력 : "))
-    l = []
-    l.append(a)
-    l.append(b)
-    d[key] = l
- 
-d = sorted(d.items(), key=lambda item: item[1][0])
- 
-ET = []
-for i in range(len(d)):
-    if(i==0):
-        ET.append(d[i][1][1])
- 
-    else:
-        ET.append(ET[i-1] + d[i][1][1])
- 
-TAT = []
-for i in range(len(d)):
-    TAT.append(ET[i] - d[i][1][0])
- 
-WT = []
-for i in range(len(d)):
-    WT.append(TAT[i] - d[i][1][1])
- 
-avg_WT = 0
-for i in WT:
-    avg_WT +=i
-avg_WT = (avg_WT/n)
+class FCFS:
+    def processData(self, no_of_processes):
+        process_data = []
+        for i in range(no_of_processes):
+            temporary = []
+            process_id = int(input("프로세스 ID 입력: "))
+            arrival_time = int(input(f"프로세스 {process_id}의 도착 시간 입력 : "))
+            burst_time = int(input(f"프로세스 {process_id}의 실행 시간 입력 : "))
+            temporary.extend([process_id, arrival_time, burst_time])
+            process_data.append(temporary)
+        FCFS.schedulingProcess(self, process_data)
 
-avg_TAT = 0
-for i in TAT:
-    avg_TAT +=i
-avg_TAT = (avg_TAT/n)
- 
-print("| 프로세스 | 도착 시간 | 실행 시간 | 완료 시간 | 반환 시간 | 대기 시간 |")
-for i in range(n):
-      print("   ",d[i][0],"   |   ",d[i][1][0]," |    ",d[i][1][1]," |    ",ET[i],"  |    ",TAT[i],"  |   ",WT[i],"   |  ")
-print("평균 대기 시간 : ",avg_WT)
-print("평균 반환 시간 : ",avg_TAT)
+    def schedulingProcess(self, process_data):
+        process_data.sort(key=lambda x: x[1])
+        start_time = []
+        exit_time = []
+        s_time = 0
+        for i in range(len(process_data)):
+            if s_time < process_data[i][1]:
+                s_time = process_data[i][1]
+            start_time.append(s_time)
+            s_time = s_time + process_data[i][2]
+            e_time = s_time
+            exit_time.append(e_time)
+            process_data[i].append(e_time)
+        t_time = FCFS.calculateTurnaroundTime(self, process_data)
+        w_time = FCFS.calculateWaitingTime(self, process_data)
+        FCFS.printData(self, process_data, t_time, w_time)
+
+    def calculateTurnaroundTime(self, process_data):
+        total_turnaround_time = 0
+        for i in range(len(process_data)):
+            turnaround_time = process_data[i][3] - process_data[i][1]
+            total_turnaround_time = total_turnaround_time + turnaround_time
+            process_data[i].append(turnaround_time)
+        average_turnaround_time = total_turnaround_time / len(process_data)
+        return average_turnaround_time
+
+    def calculateWaitingTime(self, process_data):
+        total_waiting_time = 0
+        for i in range(len(process_data)):
+            waiting_time = process_data[i][4] - process_data[i][2]
+            total_waiting_time = total_waiting_time + waiting_time
+            process_data[i].append(waiting_time)
+        average_waiting_time = total_waiting_time / len(process_data)
+        return average_waiting_time
+
+    def printData(self, process_data, average_turnaround_time, average_waiting_time):
+        print("| 프로세스 ID | 도착 시간 | 실행 시간 | 완료 시간 | 반환 시간 | 대기 시간 |")
+
+        for i in range(len(process_data)):
+            for j in range(len(process_data[i])):
+                print(process_data[i][j], end=" |    ")
+            print()
+
+        print(f'평균 반환 시간 : {average_turnaround_time}')
+        print(f'평균 대기 시간 : {average_waiting_time}')
+
+if __name__ == "__main__":
+    no_of_processes = int(input("프로세스의 개수 입력 : "))
+    fcfs = FCFS()
+    fcfs.processData(no_of_processes)
