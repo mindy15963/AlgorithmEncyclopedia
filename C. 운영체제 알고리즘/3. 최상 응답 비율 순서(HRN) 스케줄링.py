@@ -6,7 +6,7 @@ class HRRN:
         process_data = []
         for i in range(no_of_processes):
             temporary = []
-            process_id = int(input("프로세스 ID 입력: "))
+            process_id = input("프로세스 ID 입력: ")
             arrival_time = int(input(f"프로세스 {process_id}의 도착 시간 입력 : "))
             burst_time = int(input(f"프로세스 {process_id}의 실행 시간 입력 : "))
             temporary.extend([process_id, arrival_time, burst_time, 0])
@@ -88,11 +88,11 @@ class HRRN:
         for i in range(len(process_data)):
             for j in range(len(process_data[i])):
 
-                print(process_data[i][j], end="\t\t\t\t")
+                print(process_data[i][j], end=" |    ")
             print()
         print(f'평균 반환 시간 : {average_turnaround_time}')
         print(f'평균 대기 시간 : {average_waiting_time}')
-        print(f'프로세스의 시퀀스: {sequence_of_processes}')
+        print(f'프로세스의 순서 : {sequence_of_processes}')
 
 if __name__ == "__main__":
     no_of_processes = int(input("프로세스의 개수 입력 : "))

@@ -6,7 +6,7 @@ class FCFS:
         process_data = []
         for i in range(no_of_processes):
             temporary = []
-            process_id = int(input("프로세스 ID 입력: "))
+            process_id = input("프로세스 ID 입력: ")
             arrival_time = int(input(f"프로세스 {process_id}의 도착 시간 입력 : "))
             burst_time = int(input(f"프로세스 {process_id}의 실행 시간 입력 : "))
             temporary.extend([process_id, arrival_time, burst_time])
