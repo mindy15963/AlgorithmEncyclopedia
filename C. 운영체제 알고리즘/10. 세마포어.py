@@ -1,4 +1,4 @@
-# 세마포어(Semaphore)
+# 세마포어 (Semaphore)
 # 정수값을 갖는 변수이며 자원의 개수를 의미한다.
 
 import threading
