@@ -1,4 +1,4 @@
-# K-최근접 이웃(K-NN, K-Nearest Neighbor)
+# K-최근접 이웃 (K-NN, K-Nearest Neighbor)
 # 데이터로부터 거리가 가까운 'k'개의 다른 데이터의 레이블을 참조하여 분류하는 알고리즘이다.
 
 import numpy as np
