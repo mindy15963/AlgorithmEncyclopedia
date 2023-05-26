@@ -5,7 +5,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 
-dc=int(input('데이터의 갯수 입력 : '))
+dc=int(input('데이터의 개수 입력 : '))
 x_arr = [list(map(int, input('x 데이터 값 입력 : ').split())) for _ in range(dc)]
 y_arr = list(map(int, input('y 데이터 값 입력 : ').split()))
 
