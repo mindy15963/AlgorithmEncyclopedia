@@ -12,9 +12,12 @@ y_arr = list(map(int, input('y 데이터 값 입력 : ').split()))
 x_data=np.array(x_arr)
 y_data=np.array(y_arr)
 
-labels = ['불일치', '일치']
+labels = list(input('라벨 값 입력 : ').split())
 
-x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, test_size=0.3, random_state=777, stratify=y_data)
+tss=float(input('테스트 셋의 크기 입력 : '))
+rs=int(input('난수의 초기 값 입력 : '))
+
+x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, test_size=tss, random_state=rs, stratify=y_data)
 
 model = KNeighborsClassifier()
 
