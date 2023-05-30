@@ -19,7 +19,7 @@ b = ridge.predict([[pv2]])
 
 plt.rcParams['font.family']='Malgun Gothic'
 plt.rcParams['axes.unicode_minus'] = False
-plt.title('다항 회귀')
+plt.title('릿지 회귀')
 plt.xlabel('x 값')
 plt.ylabel('y 값')
 plt.plot(x, y, "b.",label = "데이터")
