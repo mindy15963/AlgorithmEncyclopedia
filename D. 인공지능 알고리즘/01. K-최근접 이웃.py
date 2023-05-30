@@ -2,7 +2,7 @@
 # 데이터로부터 거리가 가까운 'k'개의 다른 데이터의 레이블을 참조하여 분류하는 알고리즘이다.
 
 import numpy as np
-from sklearn.knn_selection import train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 
 dc=int(input('데이터의 개수 입력 : '))
