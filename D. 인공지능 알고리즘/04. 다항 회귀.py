@@ -26,7 +26,7 @@ plt.title('다항 회귀')
 plt.xlabel('x 값')
 plt.ylabel('y 값')
 plt.scatter(x, y, s=3)
-plt.plot(xx, y_pred, 'r-', label = 'pred')
+plt.plot(xx, y_pred, 'r-', label = '예측')
 plt.legend()
 plt.show()
 
