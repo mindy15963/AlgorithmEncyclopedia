@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 
 dc=int(input('데이터의 개수 입력 : '))
-mx=float(input('x 값의 최대값 입력 : '))
+mx=int(input('x 값의 최대값 입력 : '))
 data_set=[]
 y_list=[]
 for i in range(dc):
