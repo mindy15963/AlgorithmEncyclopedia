@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 
 dc=int(input('데이터의 개수 입력 : '))
-mx=int(input('x 값의 최대값 입력 : '))
+mx=float(input('x 값의 최대값 입력 : '))
 data_set=[]
 y_list=[]
 for i in range(dc):
@@ -22,9 +22,9 @@ print(df)
 x=df.iloc[:,:-1].values
 y=df.iloc[:,-1].values
 
-L_reg=LinearRegression()
-L_reg.fit(x,y)
-y_pre=L_reg.predict(x)
+lr=LinearRegression()
+lr.fit(x,y)
+y_pre=lr.predict(x)
 
 plt.rcParams['font.family']='Malgun Gothic'
 plt.title('선형 회귀')
@@ -33,3 +33,5 @@ plt.ylabel('y 값')
 plt.scatter(x,y)
 plt.plot(x,y_pre,color='red')
 plt.show()
+
+print(f'기울기 : {lr.coef_}, 절편 : {lr.intercept_}')
