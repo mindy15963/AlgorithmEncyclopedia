@@ -34,4 +34,4 @@ plt.scatter(x,y)
 plt.plot(x,y_pre,color='red')
 plt.show()
 
-print(f'기울기 : {lr.coef_}, 절편 : {lr.intercept_}')
+print(f'회귀 계수 : {lr.coef_}, 절편 : {lr.intercept_}')
