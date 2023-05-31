@@ -1,5 +1,6 @@
 # 라쏘 회귀 (Lasso Regression)
 # 선형 회귀에 L1 규제를 적용한 모델이다.
+# 가중치의 절대값의 합을 최소화하는 것을 추가적인 제약 조건으로 한다.
 
 import numpy as np
 import matplotlib.pyplot as plt
