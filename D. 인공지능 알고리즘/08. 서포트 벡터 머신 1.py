@@ -11,7 +11,8 @@ dc=int(input('데이터의 개수 입력 : '))
 rs=int(input('랜덤 상태 입력 : '))
 x, y = make_blobs(n_samples=dc, centers=2, random_state=rs)
 
-clf = svm.SVC(kernel='linear')
+ko=input('원하는 옵션 입력 (linear, poly, rbf, sigmoid, precomputed): ')
+clf = svm.SVC(kernel=ko)
 clf.fit(x, y)
 
 newData = [list(input('데이터 입력 : ').split())]
@@ -38,6 +39,7 @@ ax.contour(XX, YY, Z, colors='k', levels=[-1,0,1], alpha=0.5, linestyles=['--', 
 ax.scatter(clf.support_vectors_[:,0], clf.support_vectors_[:,1], s=60, facecolors='r')
 plt.show()
 
-print('가중치 : ',clf.coef_)
+if ko=='linear':
+    print('가중치 : ',clf.coef_)
 print('절편향 : ',clf.intercept_)
 print('학습 정확도 : ',np.mean(y==clf.predict(x)))
