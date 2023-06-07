@@ -1,4 +1,4 @@
-# 결정 트리(Decision Tree)
+# 의사결정 트리(Decision Tree)
 # 데이터에 있는 규칙을 학습을 통해 자동으로 찾아내 트리 기반의 분류 규칙을 만드는 것으로 이 모양이 나무를 닮아 트리 모델이다.
 
 import numpy as np
