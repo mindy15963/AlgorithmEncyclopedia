@@ -1,4 +1,4 @@
-# 로지스틱 회귀 (Logistic Regression)
+# 논리 회귀 (Logistic Regression)
 # 수학을 사용하여 두 데이터 요인 간의 관계를 찾는 데이터 분석 기법이다.
 
 import numpy as np
