@@ -3,7 +3,6 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.image as img
 from sklearn.tree import *
 from sklearn.datasets import make_blobs
 
