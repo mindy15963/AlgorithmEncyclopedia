@@ -8,7 +8,7 @@ from sklearn.datasets import make_moons
 dc=int(input('데이터의 개수 입력 : '))
 md=int(input('최대 깊이 입력 : '))
 x, y = make_moons(n_samples=dc, noise=0.25, random_state=3)
-x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.3,random_state=43)
+x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2,random_state=42)
 
 gb = GradientBoostingClassifier(max_depth=md)
 gb.fit(x_train,y_train)
