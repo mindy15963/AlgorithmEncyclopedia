@@ -1,4 +1,4 @@
-# 히스토그램 기반 그래디언트 부스팅(Histogram-based Gradient Boosting)
+# 히스토그램 기반 그래디언트 부스팅 (Histogram-based Gradient Boosting)
 # 앙상블 학습 기법 중 하나로, 여러 개의 결정 트리를 조합하여 예측 모델을 구축하는 알고리즘이다.
 
 from sklearn.model_selection import train_test_split

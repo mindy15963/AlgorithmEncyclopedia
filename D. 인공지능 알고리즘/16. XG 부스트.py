@@ -1,4 +1,4 @@
-# XG 부스트(eXtream Gradient Boosting)
+# XG 부스트 (eXtream Gradient Boosting, XGBoost)
 # GBM을 균형 트리 분할 방식을 보존하면서 보완한 알고리즘이다.
 
 from sklearn.model_selection import train_test_split

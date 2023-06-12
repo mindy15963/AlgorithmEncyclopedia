@@ -1,4 +1,4 @@
-# 그래디언트 부스팅(Gradient Boosting)
+# 그래디언트 부스팅 (Gradient Boosting)
 # 이전 학습의 결과에서 나온 오차를 다음 학습에 전달해 이전의 오차(잔여 오차)를 점진적으로 개선하는 부스팅 기법이자 앙상블 기법이다.
 
 from sklearn.model_selection import train_test_split

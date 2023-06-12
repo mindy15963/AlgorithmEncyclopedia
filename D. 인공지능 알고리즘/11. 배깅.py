@@ -1,5 +1,5 @@
-# 배깅(Bagging)
-# bootstrap aggregating의 줄임말로 통계적 분류와 회귀 분석에서 사용되는 기계 학습 알고리즘의 안정성과 정확도를 향상시키기 위해 고안된 일종의 앙상블 학습법의 메타 알고리즘이다.
+# 배깅 (Bagging)
+# Bootstrap Aggregating의 줄임말로 통계적 분류와 회귀 분석에서 사용되는 기계 학습 알고리즘의 안정성과 정확도를 향상시키기 위해 고안된 일종의 앙상블 학습법의 메타 알고리즘이다.
 
 import numpy as np
 import matplotlib.pyplot as plt
