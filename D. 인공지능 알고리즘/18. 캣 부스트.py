@@ -7,11 +7,10 @@ from sklearn.datasets import make_moons
 from sklearn.metrics import accuracy_score
 
 dc=int(input('데이터의 개수 입력 : '))
-lr=int(input('학습률 입력 : '))
 x, y = make_moons(n_samples=dc, noise=0.25, random_state=3)
 x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2,random_state=42)
 
-ctb = CatBoostClassifier(iterations=2,depth=2,learning_rate=lr,loss_function='Logloss',verbose=True)
+ctb = CatBoostClassifier(iterations=2,depth=2,learning_rate=2,loss_function='Logloss',verbose=True)
 ctb.fit(x_train,y_train)
 y_pred=ctb.predict(x_test)
 
