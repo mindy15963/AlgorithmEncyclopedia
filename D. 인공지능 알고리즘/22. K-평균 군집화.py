@@ -1,5 +1,5 @@
-# K-평균 클러스터링 (K-means clustering)
-# 주어진 데이터를 k개의 클러스터로 묶는 알고리즘으로, 각 클러스터와 거리 차이의 분산을 최소화하는 방식으로 동작한다.
+# K-평균 군집화 (K-means clustering)
+# 주어진 데이터를 k개의 군집으로 묶는 알고리즘으로, 각 클러스터와 거리 차이의 분산을 최소화하는 방식으로 동작한다.
 
 import numpy as np
 import matplotlib.pyplot as plt
