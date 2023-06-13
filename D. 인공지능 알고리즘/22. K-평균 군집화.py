@@ -24,19 +24,22 @@ print(f'레이블 결과 : \n{k_means_labels}')
 k_means_cluster_centers=k_means.cluster_centers_
 print(f'중심점 값 결과 : \n{k_means_cluster_centers}')
 
+plt.rcParams['font.family']='Malgun Gothic'
+plt.rcParams['axes.unicode_minus'] = False
+
 fig=plt.figure(figsize=(6,4))
 
 colors=plt.cm.Spectral(np.linspace(0,1,len(set(k_means_labels))))
 
 ax=fig.add_subplot(1,1,1)
 
-for k,col in zip(range(4),colors):
+for k,col in zip(range(ct),colors):
     my_members=(k_means_labels==k)
     cluster_center=k_means_cluster_centers[k]
     ax.plot(x[my_members,0],x[my_members,1],'w',markerfacecolor=col,marker='.')
     ax.plot(cluster_center[0],cluster_center[1],'o',markerfacecolor=col,markeredgecolor='k',markersize=6)
 
-ax.set_title('K-Means')
+plt.title('K-평균 군집화')
 ax.set_xticks(())
 ax.set_yticks(())
 plt.show()
