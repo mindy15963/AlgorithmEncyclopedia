@@ -5,7 +5,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.mixture import GaussianMixture
 from sklearn.datasets import make_blobs
-from sklearn.preprocessing import StandardScaler
 
 ns=int(input('표본 데이터의 수 입력 : '))
 ct=int(input('생성할 군집의 수 입력 : '))
