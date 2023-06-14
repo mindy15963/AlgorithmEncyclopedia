@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler
 ns=int(input('표본 데이터의 수 입력 : '))
 ct=int(input('생성할 군집의 수 입력 : '))
 
-x,y=make_blobs(n_samples=ns,centers=ct,cluster_std=0.4,random_state=42)
+x,y=make_blobs(n_samples=ns,centers=ct,cluster_std=0.4,random_state=0)
 
 gmm = GaussianMixture(n_components=ct)
 gmm.fit(x)
