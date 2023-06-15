@@ -1,4 +1,4 @@
-# BIRCH(Balanced Iterative Reducing and Clustering using Hierarchies)
+# BIRCH (Balanced Iterative Reducing and Clustering using Hierarchies)
 # 대규모 데이터셋을 처리하기 위해 개발된 군집화 알고리즘이다.
 
 import numpy as np
