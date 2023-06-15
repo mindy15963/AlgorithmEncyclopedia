@@ -15,5 +15,5 @@ lr = LogisticRegression()
 basic_scores= cross_val_score(lr,x,y)
 cv_scores= cross_val_score(lr,x,y,cv=c)
 
-print('기본 교차 검증 점수 : ', basic_scores)
-print(f'{c}겹 교차 검증 점수 : ', cv_scores)
+print('기본 교차 검증 정확도 : ', basic_scores)
+print(f'{c}겹 교차 검증 정확도 : ', cv_scores)
