@@ -1,4 +1,4 @@
-# LOOCV 교차 검증 (LOOCV Cross Validation)
+# LOOCV 교차 검증 (Leave-One-Out Cross Validation, LOOCV)
 # 폴드 하나에 샘플 하나만 들어 있는 k-겹 교차 검증으로 각 반복에서 하나의 데이터 포인트를 선택해 테스트 세트로 사용한다.
 
 from sklearn.model_selection import cross_val_score

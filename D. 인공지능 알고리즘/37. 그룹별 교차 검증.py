@@ -1,4 +1,4 @@
-# 그룹별 교차 검증 (Groups Cross Validation)
+# 그룹별 교차 검증 (Group K-Fold Cross Validation)
 # 데이터 안에 매우 연관된 그룹이 있을 때 사용하는 교차 검증 방식이다.
 
 import matplotlib.pyplot as plt

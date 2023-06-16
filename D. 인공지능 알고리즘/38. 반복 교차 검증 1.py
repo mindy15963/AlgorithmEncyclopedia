@@ -1,4 +1,4 @@
-# 반복 교차 검증 (Repeated Cross Validation)
+# 반복 교차 검증 (Repeated K-Fold Cross Validation)
 # 데이터셋의 크기가 크지 않을 경우 안정된 검증 점수를 얻기 위해 교차 검증을 반복하여 여러 번 수행하는 교차 검증 방식이다.
 
 from sklearn.datasets import make_moons
