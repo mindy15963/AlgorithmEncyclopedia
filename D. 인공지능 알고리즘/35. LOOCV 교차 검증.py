@@ -16,4 +16,4 @@ loo = LeaveOneOut()
 scores = cross_val_score(lr,x,y,cv=loo)
 
 print("교차 검증 분할 횟수 : ", len(scores))
-print("평균 정확도 : {:.2f}".format(scores.mean()))
+print("평균 점수 : {:.2f}".format(scores.mean()))

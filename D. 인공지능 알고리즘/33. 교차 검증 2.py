@@ -14,4 +14,4 @@ lr = LogisticRegression()
 
 scores= cross_validate(lr,x,y, cv = c)
 
-print('결과값 : \n', scores)
+print('점수 : \n', scores)

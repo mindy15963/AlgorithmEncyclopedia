@@ -23,7 +23,7 @@ knn = KNeighborsClassifier()
 
 knn.fit(x_train, y_train)
 
-print(f'트레인 데이터 점수 : {knn.score(x_train, y_train)}')
+print(f'훈련 데이터 점수 : {knn.score(x_train, y_train)}')
 print(f'테스트 데이터 점수 : {knn.score(x_test, y_test)}')
 
 pv=x_arr = [list(map(int, input('예측할 값 입력 : ').split())) for _ in range(1)]

@@ -13,5 +13,5 @@ x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.2,random_sta
 gb = GradientBoostingClassifier(max_depth=md)
 gb.fit(x_train,y_train)
 
-print("훈련 세트 정확도 : {:.3f}".format(gb.score(x_train,y_train)))
-print("테스트 세트 정확도 : {:.3f}".format(gb.score(x_test,y_test)))
+print("훈련 세트 점수 : {:.3f}".format(gb.score(x_train,y_train)))
+print("테스트 세트 점수 : {:.3f}".format(gb.score(x_test,y_test)))

@@ -21,5 +21,5 @@ mg.plots.plot_2d_separator(et, x, fill=True, alpha=0.5)
 mg.discrete_scatter(x[:,0], x[:,1], y)
 plt.show()
 
-print("훈련 세트 정확도 : {:.3f}".format(et.score(x_train,y_train)))
-print("테스트 세트 정확도 : {:.3f}".format(et.score(x_test,y_test)))
+print("훈련 세트 점수 : {:.3f}".format(et.score(x_train,y_train)))
+print("테스트 세트 점수 : {:.3f}".format(et.score(x_test,y_test)))

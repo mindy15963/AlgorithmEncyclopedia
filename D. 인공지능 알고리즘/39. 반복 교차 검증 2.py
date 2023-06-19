@@ -14,4 +14,4 @@ rskfold = RepeatedStratifiedKFold(random_state=42)
 scores = cross_val_score(lr, x, y, cv = rskfold)
 
 print("교차 검증 점수 : \n", scores)
-print("평균 정확도 : {:.3f}".format(scores.mean()))
+print("평균 점수 : {:.3f}".format(scores.mean()))
