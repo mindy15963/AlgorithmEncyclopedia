@@ -1,5 +1,5 @@
 # 퍼셉트론 (Perceptron)
-# 인공 신경망의 구성 요소로서 다수의 값을 입력받아 하나의 값으로 출력하는 알고리즘이다.
+# 가장 간단한 형태의 인공 신경망으로, 인공 신경망의 구성 요소로서 다수의 값을 입력받아 하나의 값으로 출력하는 알고리즘이다.
 
 from sklearn.datasets import make_blobs
 from sklearn.preprocessing import StandardScaler
