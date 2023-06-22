@@ -11,16 +11,18 @@ if device == 'cuda':
 X = torch.FloatTensor([[0, 0], [0, 1], [1, 0], [1, 1]]).to(device)
 Y = torch.FloatTensor([[0], [1], [1], [0]]).to(device)
 
-model = nn.Sequential(
-          nn.Linear(2, 10, bias=True),
-          nn.Sigmoid(),
-          nn.Linear(10, 10, bias=True),
-          nn.Sigmoid(),
-          nn.Linear(10, 10, bias=True),
-          nn.Sigmoid(),
-          nn.Linear(10, 1, bias=True),
-          nn.Sigmoid()
-          ).to(device)
+hl=int(input('은닉층 개수 입력 : '))
+
+modules = []
+modules.append(nn.Linear(2, 10, bias=True))
+modules.append(nn.Sigmoid())
+for i in range(hl-1):
+    modules.append(nn.Linear(10, 10, bias=True))
+    modules.append(nn.Sigmoid())
+modules.append(nn.Linear(10, 1, bias=True))
+modules.append(nn.Sigmoid())
+
+model = nn.Sequential(*modules).to(device)
 
 criterion = torch.nn.BCELoss().to(device)
 optimizer = torch.optim.SGD(model.parameters(), lr=1)
