@@ -1,5 +1,5 @@
 # 다층 퍼셉트론 (Multilayer Perceptron, MLP)
-# 여러 개의 은닉층을 갖는 인공 신경망이다.
+# 여러 개의 은닉층을 갖는 퍼셉트론이다.
 
 import torch
 import torch.nn as nn
@@ -11,16 +11,23 @@ if device == 'cuda':
 X = torch.FloatTensor([[0, 0], [0, 1], [1, 0], [1, 1]]).to(device)
 Y = torch.FloatTensor([[0], [1], [1], [0]]).to(device)
 
-linear = nn.Linear(2, 1, bias=True)
-sigmoid = nn.Sigmoid()
-model = nn.Sequential(linear, sigmoid).to(device)
+model = nn.Sequential(
+          nn.Linear(2, 10, bias=True),
+          nn.Sigmoid(),
+          nn.Linear(10, 10, bias=True),
+          nn.Sigmoid(),
+          nn.Linear(10, 10, bias=True),
+          nn.Sigmoid(),
+          nn.Linear(10, 1, bias=True),
+          nn.Sigmoid()
+          ).to(device)
 
 criterion = torch.nn.BCELoss().to(device)
 optimizer = torch.optim.SGD(model.parameters(), lr=1)
 
 ep=int(input('에포크 횟수 입력 : '))
 
-for step in range(ep): 
+for epoch in range(ep): 
     optimizer.zero_grad()
     hypothesis = model(X)
 
@@ -28,8 +35,8 @@ for step in range(ep):
     cost.backward()
     optimizer.step()
 
-    if step % 100 == 0:
-        print(step, cost.item())
+    if epoch % 500 == 0:
+        print(epoch, cost.item())
         
 with torch.no_grad():
     hypothesis = model(X)
