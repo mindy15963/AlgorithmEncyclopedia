@@ -1,5 +1,5 @@
-# 다층 퍼셉트론 (Multilayer Perceptron, MLP)
-# 여러 개의 은닉층을 갖는 퍼셉트론이다.
+# 단층 퍼셉트론 (Snglelayer Perceptron, SLP)
+# 한 개의 은닉층을 갖는 퍼셉트론이다.
 
 import torch
 import torch.nn as nn
@@ -11,25 +11,16 @@ if device == 'cuda':
 X = torch.FloatTensor([[0, 0], [0, 1], [1, 0], [1, 1]]).to(device)
 Y = torch.FloatTensor([[0], [1], [1], [0]]).to(device)
 
-hl=int(input('은닉층 개수 입력 : '))
-
-modules = []
-modules.append(nn.Linear(2, 10, bias=True))
-modules.append(nn.Sigmoid())
-for i in range(hl-1):
-    modules.append(nn.Linear(10, 10, bias=True))
-    modules.append(nn.Sigmoid())
-modules.append(nn.Linear(10, 1, bias=True))
-modules.append(nn.Sigmoid())
-
-model = nn.Sequential(*modules).to(device)
+linear = nn.Linear(2, 1, bias=True)
+sigmoid = nn.Sigmoid()
+model = nn.Sequential(linear, sigmoid).to(device)
 
 criterion = torch.nn.BCELoss().to(device)
 optimizer = torch.optim.SGD(model.parameters(), lr=1)
 
-ep=int(input('에포크 횟수 입력 : '))
+ep=int(input('학습 횟수 입력 : '))
 
-for epoch in range(ep): 
+for step in range(ep): 
     optimizer.zero_grad()
     hypothesis = model(X)
 
@@ -37,8 +28,8 @@ for epoch in range(ep):
     cost.backward()
     optimizer.step()
 
-    if epoch % 500 == 0:
-        print(epoch, cost.item())
+    if step % 100 == 0:
+        print(step, cost.item())
         
 with torch.no_grad():
     hypothesis = model(X)
