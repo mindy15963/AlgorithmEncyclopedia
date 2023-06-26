@@ -1,7 +1,6 @@
 # 합성곱 신경망 (Convolutional neural network, CNN)
 # 이미지 처리에 탁월한 성능을 보이는 인공신경망이다.
 
-import sys
 import tensorflow as tf
 import keras
 from keras.models import Sequential
@@ -53,7 +52,6 @@ score = model.evaluate(x_test, y_test, verbose=0)
 print('테스트 손실도 : ', score[0])
 print('테스트 정확도 : ', score[1])
 
-import random
 import matplotlib.pyplot as plt
 
 predicted_result = model.predict(x_test)
@@ -64,6 +62,7 @@ test_labels = np.argmax(y_test, axis=1)
 count = 0
 
 plt.rcParams['font.family']='Malgun Gothic'
+plt.rcParams['axes.unicode_minus'] = False
 plt.figure(figsize=(12,8))
 for n in range(16):
     count += 1
