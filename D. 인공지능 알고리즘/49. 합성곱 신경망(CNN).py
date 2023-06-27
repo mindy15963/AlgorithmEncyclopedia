@@ -1,4 +1,4 @@
-# 합성곱 신경망 (Convolutional neural network, CNN)
+# 합성곱 신경망 (Convolutional Neural Network, CNN)
 # 이미지 처리에 탁월한 성능을 보이는 인공신경망이다.
 
 import tensorflow as tf

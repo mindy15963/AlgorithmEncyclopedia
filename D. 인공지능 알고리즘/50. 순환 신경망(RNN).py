@@ -1,4 +1,4 @@
-# 순환 신경망 (Convolutional neural network, CNN)
+# 순환 신경망 (Recurrent Neural Network, RNN)
 # 순차 데이터나 시계열 데이터를 이용하는 인공신경망이다.
 
 from keras.datasets import imdb
