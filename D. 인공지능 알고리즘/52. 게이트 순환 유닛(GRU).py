@@ -1,9 +1,9 @@
-# 장단기 메모리 (Long Short Term Memory, LSTM)
-# 기존의 순환 신경망(RNN)이 출력과 먼 위치에 있는 정보를 기억할 수 없다는 단점을 보완하여 장/단기 기억을 가능하게 설계한 신경망의 구조이다.
+# 게이트 순환 유닛 (Gated Recurrent Unit, GRU)
+# 장기 의존성 문제를 해결하기 위해 제안된 순환 신경망(RNN) 구조이다.
 
 import numpy as np
 from keras.models import Sequential
-from keras.layers import LSTM, Dense
+from keras.layers import GRU, Dense
 
 data = np.arange(10).reshape((10, 1))
 
@@ -11,7 +11,7 @@ X = data[:-1]
 y = data[1:]
 
 model = Sequential()
-model.add(LSTM(10, input_shape=(1, 1)))
+model.add(GRU(10, input_shape=(1, 1)))
 model.add(Dense(1))
 
 model.compile(optimizer='adam', loss='mse')
