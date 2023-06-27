@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 
 plt.rcParams['font.family']='Malgun Gothic'
 plt.rcParams['axes.unicode_minus'] = False
+plt.title('데이터 수집 결과')
 plt.hist(lengths)
 plt.xlabel('길이')
 plt.ylabel('주파수')
@@ -49,6 +50,7 @@ history = model.fit(train_seq, train_target, epochs=ep, batch_size=64,validation
 
 plt.rcParams['font.family']='Malgun Gothic'
 plt.rcParams['axes.unicode_minus'] = False
+plt.title('순환 신경망(RNN) 결과')
 plt.plot(history.history['loss'])
 plt.plot(history.history['val_loss'])
 plt.xlabel('학습 횟수')
