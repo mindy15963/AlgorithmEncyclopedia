@@ -43,4 +43,4 @@ test_accuracy = accuracy_score(y_test, y_pred_test)
 
 print("훈련 정확도 : ", train_accuracy)
 print("검증 정확도 : ", val_accuracy)
-print("테스트 정확도 :", test_accuracy)
+print("테스트 정확도 : ", test_accuracy)
