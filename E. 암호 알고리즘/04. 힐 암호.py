@@ -1,5 +1,5 @@
 # 힐 암호 (Hill Cipher)
-# 선형 대수학을 기반으로 하는 다중 문자 대체 암호이다.
+# 선형 대수학을 기반으로 하는 다중 문자 대체 암호법이다.
 
 from kryptor.hill_cipher import HillCipher
 plain=input('평문 입력 : ')
