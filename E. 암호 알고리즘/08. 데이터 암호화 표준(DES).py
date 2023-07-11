@@ -1,4 +1,4 @@
-# DES (Data Encryption Standard)
+# 데이터 암호화 표준 (DES, Data Encryption Standard)
 # 64비트 평문을 64비트 암호문으로 암호화하는 대칭키 암호 알고리즘이다.
 
 from Crypto.Cipher import DES
