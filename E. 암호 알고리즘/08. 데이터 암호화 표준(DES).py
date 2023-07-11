@@ -8,10 +8,10 @@ def pad(text):
     return text
 
 key = input('키 입력 : ').encode()
-text1 = input('평문 입력 : ')
+plain = input('평문 입력 : ')
 
 des = DES.new(key, DES.MODE_ECB)
-padded_text = pad(text1)
+padded_text = pad(plain)
 encrypted_text = des.encrypt(padded_text.encode())
 
 print('암호문 : ',encrypted_text)
