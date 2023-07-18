@@ -1,4 +1,4 @@
-# 타원곡선 디지털서명 알고리즘 (ECDSA,lliptic Curve Digital Signature Algorithm)
+# 타원곡선 디지털서명 알고리즘 (ECDSA, Elliptic Curve Digital Signature Algorithm)
 # 타원곡선암호를 전자서명에 접목시킨 암호 알고리즘이다.
 
 from Crypto.PublicKey import ECC
